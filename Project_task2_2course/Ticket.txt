@@ -1,3 +1,10 @@
-Ferrari 9 triller 210 4D
-Saw9 10 horror 90 2D
-Zootopia 8 cartoon 120 2D
+Ferrari
+triller
+10
+200
+4D
+Zootropia
+cartoon
+7
+120
+2D

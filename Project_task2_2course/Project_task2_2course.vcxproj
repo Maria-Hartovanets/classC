@@ -139,24 +139,31 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
+    <ClInclude Include="ActorRepository.h" />
     <ClInclude Include="Cinema.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Couter.h" />
     <ClInclude Include="DoCinema.h" />
     <ClInclude Include="Human.h" />
+    <ClInclude Include="MainRepository.h" />
     <ClInclude Include="Metods.h" />
     <ClInclude Include="Movie.h" />
+    <ClInclude Include="MovieRepository.h" />
+    <ClInclude Include="Temp.h" />
     <ClInclude Include="Ticket.h" />
+    <ClInclude Include="TicketRepository.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Actor.cpp" />
-    <ClCompile Include="Cinema.cpp" />
+    <ClCompile Include="ActorRepository.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="DoCinema.cpp" />
-    <ClCompile Include="Human.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainRepository.cpp" />
     <ClCompile Include="Movie.cpp" />
+    <ClCompile Include="MovieRepository.cpp" />
     <ClCompile Include="Ticket.cpp" />
+    <ClCompile Include="TicketRepository.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

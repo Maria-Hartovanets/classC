@@ -1,33 +1,23 @@
 #include "Ticket.h"
 
-Ticket::Ticket(string nameMovie, int rating, string genre, int price, string kindM)
-	:Movie(nameMovie, rating, genre)
+Ticket::Ticket(	string nameMovie,string genre,int rating, int price, string kindM) 
+	:Cinema(nameMovie, genre, rating)
 {
-	this->nameMovie = nameMovie;
-	this->genre = genre;
-	this->rating = rating;
-	this->price = price;
+	
 	this->kindM = kindM;
+	this->price = price;
 }
 
-void Ticket::InfoTicket(string nameMovie, string genre, int rating, int price, string kindM)
-{
-	this->nameMovie = nameMovie;
-	this->genre = genre;
-	this->rating = rating;
-	this->price = price;
-	this->kindM = kindM;
-
-}
 
 string Ticket::strInfo()
 {
-	return "\nName Movie: " + nameMovie + "\nGenre: " + genre + "\nRating: " + to_string(rating) +
-		"\nPrice: " + to_string(price) + "\nKind of movie: " + kindM + "\n";
+	return nameMovie+" " + genre + " " 
+		+ to_string(price) + " " + kindM + "\n";
 }
 
-void Ticket::writeInfoC() {
-
-	cout << "Name: " << nameMovie << "\ngenre: " << genre << " \nrating:" << rating
-		<< "\nPrice of a ticket:" << price << "\nkind of ticket:" << kindM << endl;
+void Ticket::writeInfo() {
+	//cout << "\tAll info of ticket:\n";
+	cout << "Name movie: " << nameMovie <</*<< "\nLocation and year: " << place << " "
+		<< year << */"\ngenre: " << genre << "\ntype and rating:"
+		<< kindM << " and " << rating <<"\nprice: "<<price<< endl<<endl;
 }

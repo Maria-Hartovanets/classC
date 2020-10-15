@@ -7,22 +7,20 @@
 #include <iostream>
 using namespace std;
 
-class Ticket : public Movie
+class Ticket  : public Cinema
 {
+	/*    By the end of this project my class Ticket menas
+		  more info of one movie      */
+
 public:
-	string nameMovie;
-	string genre;
-	int rating;
-	int price;
 	string kindM;
+	int price;
 
-	Ticket(string = "", int = 0, string = "", int = 0, string = "");
+	Ticket(string nameMovie,string genre,int rating, int price, string kindM);
 
-	void InfoTicket(string nameMovie, string genre, int rating, int price, string kindM);
+	 void writeInfo();
 
-	string strInfo();
-
-	virtual void writeInfoC();
+	 string strInfo();
 
 };
 

@@ -3,193 +3,144 @@
 #include "Couter.h"
 
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 
 void SHOW_ALL_MENU()
 {
-	DoCinema doing, d;
-	doing.writeToCinemaFile();
-	doing.writeToMovieFile();
-	doing.writeToTicketFile();
+	cout << "              WELCOME to the menu of cinema!\n" <<
+		    "                Now we are ready to start! " << endl;
 
+	DoCinema comand;
 
-	cout << "              WELCOME to the menu of cinemas!\n                 Please choose your option: " << endl;
-	//ShowMenu();
-
-	bool temp = true;
-	while (temp) {
+	bool temp = true, cycleOption = true;
+	int choice = 0;
+	
+	comand.toSumUp();
+	while (temp)
+	{
 		ShowMenu();
-		int choice;
 		cin >> choice;
-
 		switch (choice)
 		{
-
 		case 1:
 		{
-			while (true) {
-				ShowCinemaMenu();
-				char option;
-				cin >> option;
-				if (option == 'A')
+			do
+			{
+				ShowMovieMenu();
+				char op;
+				cin >> op;
+				if (op == 'A')
 				{
-					doing.write_cinema();
+					comand.Write("Movie");
 				}
-				else if (option == 'B')
+				else if (op == 'B')
 				{
-					doing.ShowTheOldestCinema();
+					comand.showPopularMovie();  /// 
 				}
-				else if (option == 'C')
-				{
-					//ShowMenu();
-					break;
-
+				else {
+					cycleOption = false;
 				}
-
-				else
-				{
-					throw "Error!\t Incorrect option!";   /////////////////////          Verify problem
-					break;
-				}
-			}
+			} while (cycleOption);
 		}break;
 
 		case 2:
 		{
-			while (true)
-			{
-				ShowMovieMenu();
-				d.writeToMovieFile();
-				char option1;
-				cin >> option1;
-				if (option1 == 'A')
+			cycleOption = true;
+			do {
+				ShowTicketMenu();
+				char op1;
+				cin >> op1;
+				if (op1 == 'A')
 				{
-					doing.write_movie(doing.ticket);
-					//doing.deleteTicketmemory(doing.ticket);
+					comand.Write("Ticket");
 				}
-				else if (option1 == 'B')
+				else if (op1 == 'B')
 				{
-					d.ShowFromTopRatingMovie();
+					comand.changeTicket();
 				}
-				else {
-					break;
+				else
+				{
+					cycleOption = false;
 				}
-			}
+			} while (cycleOption);
 		}break;
 
 		case 3:
 		{
-			while (true)
-			{
-				ShowTicketMenu();
-				char option2;
-				cin >> option2;
-				if (option2 == 'A')
+			cycleOption = true;
+			do {
+				ShowMenuHuman();
+				int ch;
+				cin >> ch;
+				bool x = true, y = true;
+				if (ch ==1)
 				{
-					doing.ChangeTicket();
+					while (x)
+					{
+						ShowActorMenu();
+						char n;
+						cin >> n;
+						switch (n)
+						{
+						case 'A':
+						{
+							comand.showAllHuman();
+						}break;
+						case 'B':
+						{
+							string firstName;
+							int rating, countOfMovie;
+							cout << "Enter actor's name:\t";
+							cin >> firstName;
+							cout << "Enter rating:\t";
+							cin >> rating;
+							cout << "Enter count of movies:\t";
+							cin >> countOfMovie;
+							Actor actor(firstName, rating, countOfMovie);
+							comand.addActor(actor);
+							cout << "Your info was written sucessfully!" << endl;
+						}break;
+						case 'C':
+						{
+							x = false;
+						}break;
+						}
+					}break;
 				}
-				else {
-					break;
-				}
-			}
 
+				if (ch ==2)
+				{
+					while (y)
+					{
+						ShowClientMenu();
+						char n;
+						cin >> n;
+						switch (n)
+						{
+						case 'A':
+						{
+
+						}break;
+						case 'B':
+						{
+							comand.addClient();
+							cout << "Your info was written sucessfully!" << endl;
+						}break;
+						case 'C':
+						{
+							y = false;
+						}break;
+						}
+					}
+				}
+			} while (cycleOption);
 		}break;
 		case 4:
 		{
-			doing.writeToActorFile();
-			doing.writeToClientFile();
-			bool t = true;
-			ShowMenuHuman();
-			int op;
-			cin >> op;
-			switch (op) {
-			case 1: {
-				while (true)
-				{
-					ShowActorMenu();
-					char option1;
-					cin >> option1;
-					if (option1 == 'A')
-					{
-
-						doing.showAllInfoHuman("Actors", doing.actorCommand);
-
-					}
-					else if (option1 == 'B')
-					{
-						//doing.writeToActorFile();
-						doing.addActor();
-						cout << "An actor has been added successfully!\n";
-					}
-					else if (option1 == 'C')
-					{
-						int index;
-						cout << "Enter the index actor to delete: ";
-						cin >> index;
-						doing.deleteActor(index);
-						cout << "An actor has been deleted successfully!\n";
-					}
-					else if (option1 == 'D')
-					{
-						int newrat;
-						cout << "Choose actor to  change rating: ";
-						cin >> newrat;
-						((Actor*)doing.actorCommand[newrat - 1])->changeRating();
-						cout << "An actor's rating has been changed successfully!\n";
-					}
-					else {
-						break;
-					}
-				}
-			}break;
-			case 2: {
-				while (true)
-				{
-					ShowClientMenu();
-					char option1;
-					cin >> option1;
-					if (option1 == 'A')
-					{
-						doing.showAllInfoHuman("Clients", doing.clientCommand);
-					}
-					else if (option1 == 'B')
-					{
-						doing.addClient();
-						cout << "A client has been added successfully!\n";
-					}
-					else if (option1 == 'C')
-					{
-						int index;
-						cout << "Enter the index client to delete: ";
-						cin >> index;
-						doing.deleteActor(index);
-						cout << "A client has been deleted successfully!\n";
-
-					}
-					else if (option1 == 'D')
-					{
-						short home;
-						cout << "Choose client to  change hometown: ";
-						cin >> home;
-						((Client*)doing.clientCommand[home - 1])->changeTown();
-						cout << "A client's home has been changed successfully!\n";
-					}
-					else {
-						break;
-					}
-				}
-			}
-			}
-
-
-		}break;
-		case 5:
-		{
 			temp = false;
-			break;
 		}break;
-
 		default:
 			cout << "Sorry!\nYou made a mistake in choosing an option!\nTRY AGAIN!\n";
 		}

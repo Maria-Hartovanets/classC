@@ -3,25 +3,39 @@
 
 
 #include <string>
+#include "Temp.h"
+
 using namespace std;
 
-class Cinema
+class Cinema:public Temp
+	/*    By the end of this project my class Cinema menas 
+	      database of all movies in only one cinema     */
 {
-	string nameBuild;
-	string place;
-	//int date;
-
 public:
-	int year;
 
-	//Cinema();
 
-	void InfoCinema( /*string doing,*/string = "Forum", string = "Lviv", int year = 1990);
+	Cinema(string nameMovie, string genre, int rating = 10) {
+		
+		this->nameMovie = nameMovie;
+		this->genre = genre;
+		this->rating = rating;
+	}
 
-	string WriteAllInfo1();
+	int GetRating() {
+		return rating;
+	}
 
-	void WriteCinema();
+	string GetName() {
+		return nameMovie;
+	}
+	
+protected:
+	string nameMovie;
+	string genre;
+	int rating;
+	
 
 };
 
 #endif // !CINEMA_H
+

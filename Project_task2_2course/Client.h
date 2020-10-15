@@ -7,18 +7,17 @@
 using namespace std;
 
 class Client :public Human {
+	string mov;
 public:
-	string homeTown;
 
-	Client(string = "", string = "", int = 0, string = "");
+	Client(string = "", string = "");
 
-	virtual void writeInfo();
-
-	void changeTown();
-	void addClient(string firstName, string lastName, int age, int rating);
+	void writeInfo();
 
 	string strInfo();
+
 
 };
 
 #endif
+

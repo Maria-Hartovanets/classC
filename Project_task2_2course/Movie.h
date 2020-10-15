@@ -2,28 +2,25 @@
 #define MOVIE_H
 
 #include"Cinema.h"
+#include "Temp.h"
 #include <string>
 
 using namespace std;
 
-class Movie
+class Movie: public Cinema
 {
 
 public:
 
-	string nameMovie;
-	string genre;
-	int rating;
+	Movie(string nameMovie,string genre, int rating);
 
-	Movie(string = "", int = 0, string = "");
+	string strInfo() {
+		return  nameMovie + " " + genre
+			+ " " + to_string(rating) + "\n";
+	}
 
-	void InfoMovie(string nameMovie, string genre, int rating);
-
-	virtual void writeInfoC();
-
-	void Info();
+	void writeInfo();
 
 
 };
-
-#endif // !MOVIE_H
+#endif

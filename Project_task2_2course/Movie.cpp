@@ -5,31 +5,18 @@
 using namespace std;
 
 
-Movie::Movie(string nameMovie, int rating, string genre)
+Movie::Movie(string nameMovie, string genre, int rating) :
+	Cinema(nameMovie, genre, rating)
 {
-	this->nameMovie = nameMovie;
-	this->genre = genre;
-	this->rating = rating;
-}
-
-void Movie::InfoMovie(string nameMovie, string genre, int rating)
-{
-	this->rating = rating;
-	this->nameMovie = nameMovie;
-	this->genre = genre;
-
-}
-
-void Movie::writeInfoC()
-{
-	cout << "     Info of movie:" << endl;
-	cout << "Name: " << nameMovie << "\ngenre: " << genre << " \nrating:" << rating << endl;
+	
 }
 
 
-void Movie::Info()
+void Movie::writeInfo()
 {
-
-	cout << "movie: " << nameMovie << "\ngenre: " << genre << "\n";
+	//cout << "\tAll info of movie:\n";
+	cout <<"\nName: " << nameMovie << "\ngenre: " << genre 
+		<< " \nrating:" << rating << endl;
 }
+
 

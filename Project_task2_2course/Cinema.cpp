@@ -1,4 +1,4 @@
-#include "Cinema.h"
+/*#include "Cinema.h"
 #include "DoCinema.h"
 #include <iostream>
 #include <iomanip>
@@ -30,3 +30,4 @@ void Cinema::WriteCinema()
 	cout << "Name build: " << nameBuild << "\nplace: " << place << "\nyear: " << year << endl << endl;
 }
 
+*/

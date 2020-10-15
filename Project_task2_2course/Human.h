@@ -3,23 +3,25 @@
 
 #include <iostream>
 #include <string>
+#include "Temp.h"
 using namespace std;
 
-class Human {
+class Human: public Temp {
 protected:
 
-	string firstName;
-	string lastName;
-	int age;
-
+	string homeTown;
+	
 public:
+	string firstName;
 
-	Human(string = "", string = "", int = 0);
-
-	virtual void writeInfo();
-
-	void addHuman(string firstName, string lastName, int age);
+	Human(string firstName) {
+		this->homeTown = "Kyiv";
+		this->firstName = firstName;
+	};
 
 };
 
 #endif 
+
+
+

@@ -4,21 +4,24 @@
 #include <iostream>
 #include <string>
 #include "Human.h"
+#include "Client.h"
 using namespace std;
 
 class Actor :public Human {
+
+	int countOfMovies;
+
 public:
+
 	int rating;
 
-	Actor(string = "", string = "", int = 0, int = 0);
-
-	virtual void writeInfo();
-
-	void changeRating();
-	void addActor(string firstName, string lastName, int age, int rating);
+	Actor(string = "", int = 0, int =0);
 
 	string strInfo();
 
+	void writeInfo();
 };
 
 #endif
+
+
