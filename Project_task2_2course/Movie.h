@@ -2,8 +2,9 @@
 #define MOVIE_H
 
 #include"Cinema.h"
-#include "Temp.h"
+#include <iostream>
 #include <string>
+#include<fstream>
 
 using namespace std;
 
@@ -11,16 +12,19 @@ class Movie: public Cinema
 {
 
 public:
-
+	Movie(){}
 	Movie(string nameMovie,string genre, int rating);
 
-	string strInfo() {
-		return  nameMovie + " " + genre
-			+ " " + to_string(rating) + "\n";
-	}
+	int GetRating();
 
-	void writeInfo();
+	string GetStorageName();
+	string GetStorageNameOut();
+	string GetHeader();
 
+	friend ifstream& operator>>(ifstream& fin, Movie&);
+	friend ofstream& operator<<(ofstream& fout, Movie&);
+	friend ostream& operator<<(ostream& out, Movie&);
+	
 
 };
 #endif

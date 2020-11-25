@@ -3,23 +3,28 @@
 
 #include <iostream>
 #include <string>
+#include<fstream>
 #include "Human.h"
-#include "Client.h"
 using namespace std;
 
 class Actor :public Human {
 
 	int countOfMovies;
-
+	int rating;
 public:
 
-	int rating;
 
-	Actor(string = "", int = 0, int =0);
+	Actor(string = "", int = 0, int =0, string ="");
 
-	string strInfo();
+	string GetStorageName();
+	string GetStorageNameOut();
+	string GetHeader();
 
-	void writeInfo();
+	int GetRating();
+
+	friend ifstream& operator>>(ifstream& fin, Actor& );
+	friend ofstream& operator<<(ofstream& fout, Actor& );
+	friend ostream& operator<<(ostream& out, Actor& );
 };
 
 #endif

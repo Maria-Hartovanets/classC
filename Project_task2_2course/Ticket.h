@@ -1,26 +1,38 @@
 #ifndef TICKET_H
 #define TICKET_H
 
-#include "Movie.h"
+#include "Cinema.h"
 
-#include <string>
 #include <iostream>
+#include <string>
+#include<fstream>
 using namespace std;
 
 class Ticket  : public Cinema
 {
 	/*    By the end of this project my class Ticket menas
 		  more info of one movie      */
-
-public:
 	string kindM;
 	int price;
+public:
 
+	Ticket() {}
 	Ticket(string nameMovie,string genre,int rating, int price, string kindM);
 
-	 void writeInfo();
+	 string GetStorageName();
+	 string GetStorageNameOut();
+	 string GetHeader();
 
-	 string strInfo();
+	 string GetKindM();
+	 int GetPrice();
+
+	 void ChangeValue(int value);
+
+	 friend ifstream& operator>>(ifstream& fin, Ticket&);
+	 friend ofstream& operator<<(ofstream& fout, Ticket&);
+	 friend ostream& operator<<(ostream& out, Ticket&);
+
+	
 
 };
 

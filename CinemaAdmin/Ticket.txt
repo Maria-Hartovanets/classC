@@ -3,8 +3,13 @@ triller
 10
 200
 4D
-Zootropia
+Wally
 cartoon
+7
+120
+2D
+Saw
+horror
 7
 120
 2D

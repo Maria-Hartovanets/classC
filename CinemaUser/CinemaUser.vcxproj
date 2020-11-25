@@ -20,19 +20,19 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{7E6DAE8A-CED3-4A2F-BEF0-70D79A93C1AE}</ProjectGuid>
-    <RootNamespace>Projecttask22course</RootNamespace>
+    <ProjectGuid>{9D777DC4-91E7-40D9-9E1C-820A53E7C0EF}</ProjectGuid>
+    <RootNamespace>CinemaUser</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -71,6 +71,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>D:\Programming\C++\Projects University\education_practice\Project_task2_2course\Debug\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -138,20 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Actor.h" />
-    <ClInclude Include="Cinema.h" />
-    <ClInclude Include="Client.h" />
-    <ClInclude Include="Couter.h" />
-    <ClInclude Include="Human.h" />
-    <ClInclude Include="MainRepository.h" />
-    <ClInclude Include="Movie.h" />
-    <ClInclude Include="Ticket.h" />
+    <ClCompile Include="CommanU.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Actor.cpp" />
-    <ClCompile Include="Client.cpp" />
-    <ClCompile Include="Movie.cpp" />
-    <ClCompile Include="Ticket.cpp" />
+    <ClInclude Include="CommandU.h" />
+    <ClInclude Include="Menu1.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project_task2_2course\Project_task2_2course.vcxproj">
+      <Project>{7e6dae8a-ced3-4a2f-bef0-70d79a93c1ae}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

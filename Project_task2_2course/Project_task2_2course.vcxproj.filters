@@ -13,81 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Classes">
+      <UniqueIdentifier>{1a717d13-81d6-4c0e-80cd-224215031ea3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Classes">
+      <UniqueIdentifier>{02507d3c-eee5-4768-9ce0-cabaff594ded}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Repositories">
+      <UniqueIdentifier>{69213639-115c-4ea0-be89-dd34b8154c2a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cinema.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Movie.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Ticket.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="DoCinema.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Human.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Client.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Metods.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Couter.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Temp.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="Actor.h">
+      <Filter>Файлы заголовков\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Cinema.h">
+      <Filter>Файлы заголовков\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>Файлы заголовков\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Human.h">
+      <Filter>Файлы заголовков\Classes</Filter>
     </ClInclude>
     <ClInclude Include="MainRepository.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Repositories</Filter>
     </ClInclude>
-    <ClInclude Include="ActorRepository.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="Ticket.h">
+      <Filter>Файлы заголовков\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="MovieRepository.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="TicketRepository.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="Movie.h">
+      <Filter>Файлы заголовков\Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Movie.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Ticket.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="DoCinema.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Actor.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Classes</Filter>
     </ClCompile>
     <ClCompile Include="Client.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Файлы ресурсов</Filter>
+    <ClCompile Include="Movie.cpp">
+      <Filter>Исходные файлы\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="MainRepository.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="ActorRepository.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="MovieRepository.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="TicketRepository.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Ticket.cpp">
+      <Filter>Исходные файлы\Classes</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

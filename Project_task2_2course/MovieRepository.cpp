@@ -8,7 +8,7 @@ MovieRepository::MovieRepository(bool data)
 
 void MovieRepository::readFromFile()
 {
-
+	//string f = "D:\Programming\C++\Projects University\education_practice\Project_task2_2course\Project_task2_2course\Movie.txt";
 	ifstream fileMovie("Movie.txt");
 	string nameMovie;
 	int rating;
@@ -32,6 +32,7 @@ void MovieRepository::readFromFile()
 
 void MovieRepository::writeToFile()
 {
+	//string f = "D:\Programming\C++\Projects University\education_practice\Project_task2_2course\Project_task2_2course\Movieout.txt";
 	ofstream fileMovie("Movieout.txt", ios::out);
 	if (!fileMovie)
 	{

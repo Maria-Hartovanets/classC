@@ -3,19 +3,19 @@
 
 #include <iostream>
 #include <string>
-#include "Temp.h"
+
 using namespace std;
 
-class Human: public Temp {
+class Human {
 protected:
 
 	string homeTown;
+	string firstName;
 	
 public:
-	string firstName;
-
-	Human(string firstName) {
-		this->homeTown = "Kyiv";
+	
+	Human(string firstName, string homeTown) {
+		this->homeTown = homeTown;
 		this->firstName = firstName;
 	};
 

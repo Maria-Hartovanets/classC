@@ -6,17 +6,55 @@ using namespace std;
 
 
 Movie::Movie(string nameMovie, string genre, int rating) :
-	Cinema(nameMovie, genre, rating)
+	Cinema(nameMovie, genre, rating){}
+
+
+int Movie::GetRating()
 {
-	
+	return rating;
 }
 
-
-void Movie::writeInfo()
+string Movie::GetStorageName()
 {
-	//cout << "\tAll info of movie:\n";
-	cout <<"\nName: " << nameMovie << "\ngenre: " << genre 
-		<< " \nrating:" << rating << endl;
+	return "Movie.txt";
 }
 
+string Movie::GetStorageNameOut()
+{
+	return "Movieout.txt";
+}
 
+string Movie::GetHeader()
+{
+	return "Movie info:\n";
+}
+
+ifstream& operator>>(ifstream& fin, Movie& movie)
+{
+	string nameMovie, genre;
+	int rating;
+
+	fin >> nameMovie >> rating >> genre;
+	movie.nameMovie = nameMovie;
+	movie.genre = genre;
+	movie.rating =rating;
+
+	return fin;
+}
+
+ofstream& operator<<(ofstream& fout, Movie& movie)
+{
+	char pr = ' ';
+	fout << movie.nameMovie << pr
+		<< movie.genre << pr
+		<< movie.rating << pr;
+	return fout;
+}
+
+ostream& operator<<(ostream& out, Movie&movie)
+{
+	out << "Name of movie: " << movie.nameMovie
+		<< "\t|\tGenre: " << movie.genre
+		<< "\t|\tRating: " << movie.rating;
+		return out;
+}
